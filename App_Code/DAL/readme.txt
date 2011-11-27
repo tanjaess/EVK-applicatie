@@ -1,0 +1,1 @@
+linq bestand en queries naar linq
