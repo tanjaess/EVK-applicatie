@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="master.master.cs" Inherits="layout_master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    <title></title>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="top" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="customNavigation" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="header" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="body" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="footer" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
