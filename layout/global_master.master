@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="layout.master.cs" Inherits="layout" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+     <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+    <link rel="stylesheet" type="text/css" media="all" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="css/screen.css"/>
+    <title></title>
+</head>
+
+<body>
+        <asp:ContentPlaceHolder id="CP_header" runat="server">
+            <div class="header">
+            <div class="logout"> <a href="#">Logout</a></div>
+            <div class="clear"></div>
+            <div id="logo">
+                <!--<img  src="http://international.plantijn.be/images/phs/container5001/Logo_Lessius_Mechelen_colour.jpg"/>-->
+            </div>
+            <div class="clear"></div>
+                <p class="contact">lukt er iets niet? <a href="#">contacteer Else Van Orle </a>
+            <hr class="line"/>
+        </div>
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="CP_nav" runat="server">
+        <div id="nav">
+            <div class="step">
+                 <ul>
+                     <li>STAP 1:</li>
+                     <li>gegevens invullen</li>
+                     <li>procedure goedkeuren</li>
+                 </ul>
+             </div>
+             <div class="step">
+                 <ul>
+                     <li>STAP 2:</li>
+                     <li>studieverloop</li>
+                     <li>selectie opleidingsonderdelen</li>
+                     <li>bijlage</li>
+                 </ul>
+             </div>
+             <div class="step">
+                 <ul>
+                    <li>STAP 3:</li>
+                    <li>overzicht vrijstellingen</li>
+                    <li>ondertekenen</li>
+                </ul>
+             </div>
+        </div>
+        <div class="clear"/>
+
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="cd_content" runat="server">
+                                 
+         <div class="wrapper">
+             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel leo massa. Praesent vel aliquet ante. Curabitur dignissim rhoncus ante sed tempus. Integer sit amet ipsum a elit euismod dignissim non at enim. Nunc adipiscing tristique auctor. Vivamus egestas euismod nunc, adipiscing consectetur justo vestibulum vehicula. Mauris ut massa sollicitudin purus posuere sodales non in odio. Vivamus nec tincidunt lectus. Curabitur vitae dui non urna bibendum sollicitudin. Suspendisse potenti. Fusce ut lacus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi vel vestibulum erat. Integer eget neque vitae tellus tempor pulvinar. Etiam magna augue, pulvinar et interdum vel, dignissim ac dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet nisl massa. Etiam lobortis ultrices eros id euismod. Nam ornare, lorem a tincidunt lobortis, arcu urna fermentum neque, vitae consectetur tellus leo non arcu. Curabitur auctor sagittis fermentum. Sed ut lorem sed libero sollicitudin gravida eget a dui. Duis posuere metus in purus pulvinar condimentum. </p>
+         </div>
+
+         </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="CP_footer" runat="server">
+            <hr class="line"/>
+         <div class="footer">
+             <p>created by: Nathalie De Hertogh, Sara Devuyst, Tanja Esselens en Toon Van Doorn</p>
+         </div>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
+
+
