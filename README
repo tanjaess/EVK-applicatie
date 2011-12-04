@@ -1,6 +1,7 @@
 Tanja:
 - admin overview
 - admin detailview
+- stap 2: selectie opleidingsonderdeel 
 
 Nathalie:
 - stap 1: gegevens invullen 
@@ -17,15 +18,14 @@ Toon:
 
 
 dingen die ons nog te wachten staan:
-- login (of was dit al gedaan?)
-- stap 2: selectie opleidingsonderdeel
+- login (of was dit al gedaan?) >> wachten tot databank
 - stap 2: bijlage
 - stap 3: onderteken
 - docent: overview (kan dit gebaseerd zijn op dat van de admin?)
 - docent detailview (kan dit gebaseerd zijn op dat van de admin?)
-- manier van mailen bekijken
-- twitter-ding voor layout bekijken
-- pdf-ding bekijken
+- (manier van mailen bekijken)
+- twitter-ding voor layout bekijken (link?)
+- pdf-ding bekijken (report.sourceforce.net ?)
 - manier om in de navigatie de huidige pagina aan te duiden
 
 
