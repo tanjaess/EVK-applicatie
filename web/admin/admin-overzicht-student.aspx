@@ -44,5 +44,6 @@
     <asp:Button ID="btnBack2" runat="server" Text="< terug" />
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="footer" Runat="Server">
+    
 </asp:Content>
 
