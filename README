@@ -1,5 +1,62 @@
-Lege mappen pushen gaat niet... drm readme in elke map.
-Verander gerust deze structuur als hij je niet aanstaat!
-Heb het ook maar gedaan om mezelf wat structuur te geven.
+Tanja:
+- admin overview
+- admin detailview
 
-Tanja
+Nathalie:
+- stap 1: gegevens invullen 
+- stap 1: procedure goedkeuring
+
+Sara:
+- Master (layout)  			 \__ dat ik toch al ongeveer evenveel code doe
+- contactformulier Els Van Orle  /
+- stap 2: studieverloop
+
+Toon:
+- database
+- stap 3: overzicht vrijstellingen
+
+
+dingen die ons nog te wachten staan:
+- login (of was dit al gedaan?)
+- stap 2: selectie opleidingsonderdeel
+- stap 2: bijlage
+- stap 3: onderteken
+- docent: overview (kan dit gebaseerd zijn op dat van de admin?)
+- docent detailview (kan dit gebaseerd zijn op dat van de admin?)
+- manier van mailen bekijken
+- twitter-ding voor layout bekijken
+- pdf-ding bekijken
+- manier om in de navigatie de huidige pagina aan te duiden
+
+
+
+===============================
+
+Uitleg git door Sara:
+
+GIT
+Nu dit zijn de dingen die reeds in orde gebracht zouden zijn:
+1) een account op github
+2) de repo van tanja "watchen" (NIET fork'en!)
+3) wachten tot tanja je toevoegend aan collaborators (denk da iedereen er al in zit): dit wil zeggen dat we mogen pushen zonder at tanja telkens toestemming moet geven.
+4) git geïnstalleerd hebben op windows (http://help.github.com/win-set-up-git/)
+5) vergeet ook niet het aanmaken van ssh keys enz, onderaan de pagina van bovenstaande link.
+
+nu kunnen we voortgaan met de volgende stappen: (niet echt voor tanja, cuz she owns the repo =D)
+- open git bash (ik vind commandline deuzend keer gemakkelijker dus leg zo ff uit =])
+- maak ergens een map aan (het handigste is in de map van u visual studio bij websites ofzo). de naam maakt niet echt uit.
+- zorg dat je in de map staat.
+- typ (of kopieer): git clone https://github.com/tanjaess/EVK-applicatie.git
+- typ ls om te checken
+- maak een bestand aan test_[naam].txt en typ er iets in (kan dat nano niet werkt in dat geval:) btw [name] = u naam XD
+- de default texteditor is hier vim. om iets te kunnen typen duw je eerst op "i" (voor insert). je typt iets. en dan duw je op "esc" en typ je ":wq". escape dient om uit de insert mode te gaan en naar de commandmode van vim te gaan (vime heeft dus 2 modes). wq staat voor write and quit.
+- vervolgens typ je: git add test_[naam].txt
+- dan typ je: git commit -m "test committing by [naam]" (dit is een verkorte manier van schrijve, op deze manier opent vim niet, wat mss handiger is voor jullie)
+- als laatste stap doeje dan: git push
+- kijk erna ff op https://github.com/tanjaess/EVK-applicatie of u commit gelukt is!
+
+p.s.: zie daje ook vaak genoeg terug "git pull" typt (wanneer je in de juiste directory staat!), zodat iedereen mee is =]
+ik stel voor dat we wachten tot iedereen een testpagina kan uploaden, en daarna zorgen we dat de file volledig wordt?
+
+ahja, en breng het thuis in orde, want opt school werkt het ni =O
+kzal als we er aan werken, het netwerk van mijn iphone ter jullie beschikking zette zoda we toch kunnen pushe naar de server ;)
