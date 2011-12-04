@@ -1,0 +1,51 @@
+﻿body {
+}
+
+.header {
+    height: 120px;
+    margin: 5px;
+}
+
+#logo {
+    height: 70px;
+    width: 168px;
+    background: #4D2C49;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: -15px;
+}
+
+
+.line{
+    height: 3px;
+    background-color: #4FC6DC;
+    color: #4FC6DC;
+}
+
+.clear{
+    clear:both;
+}
+
+a {
+    color: #4D2C49;
+}
+
+.step{
+    margin-left: 10px;
+    width: 300px;
+    height: 100px;
+    float:left;
+}
+
+.footer p{
+    margin: 20px;
+    text-align: center;
+    color: #4D2C49;
+}
+
+.wrapper {
+}
+
+.wrapper p {
+    margin: 20px;
+}
