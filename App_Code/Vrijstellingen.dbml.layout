@@ -1,89 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 17.125" name="Vrijstellingen">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 8.5" name="Vrijstellingen">
   <DataContextMoniker Name="/VrijstellingenDataContext" />
   <nestedChildShapes>
-    <classShape Id="5c6c72a6-d188-4b4e-afdc-f3656144ac41" absoluteBounds="0.75, 6.625, 2, 1.7708968098958335">
-      <DataClassMoniker Name="/VrijstellingenDataContext/tblAdmin" />
+    <classShape Id="e189ede7-e043-40c1-a510-2565dc987926" absoluteBounds="0.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/VrijstellingenDataContext/Opleiding" />
       <nestedChildShapes>
-        <elementListCompartment Id="fd62309e-efdc-472b-946c-7cf9aa5f4f35" absoluteBounds="0.765, 7.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8f335bb5-cfcd-4413-b91c-c82099a092f1" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="01d290b5-4084-49ae-b873-cd9fdb3b3536" absoluteBounds="3.5, 0.875, 2, 2.1554996744791666">
-      <DataClassMoniker Name="/VrijstellingenDataContext/tblKoppel" />
+    <classShape Id="8c852ab1-f555-46b7-b3e3-a4f5d0daf0e3" absoluteBounds="6.25, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/VrijstellingenDataContext/Vrijstelling" />
       <nestedChildShapes>
-        <elementListCompartment Id="e9ae6d09-eff1-4ee1-8ee3-f176541856d1" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5887bda3-67e6-480e-b3cf-06388e47be40" absoluteBounds="6.265, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="0a0b8571-e209-4434-9e5c-01319e7887c2" absoluteBounds="0.75, 1.375, 2, 1.3862939453125003">
-      <DataClassMoniker Name="/VrijstellingenDataContext/tblLeerkracht" />
+    <classShape Id="fd98951f-c168-4939-b2bf-9ef4a015df24" absoluteBounds="3.5, 3.625, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/VrijstellingenDataContext/Student" />
       <nestedChildShapes>
-        <elementListCompartment Id="353a1fac-04c6-48aa-92ea-f49523674d62" absoluteBounds="0.765, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="602abb64-220c-431d-bb89-266c32417c8e" absoluteBounds="3.515, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="d7ee6ef6-afb9-4314-abdb-48d1dd21c1c5" absoluteBounds="0.75, 11.875, 2, 2.1554996744791666">
-      <DataClassMoniker Name="/VrijstellingenDataContext/tblRapport" />
+    <classShape Id="3fdf8c9a-c911-4190-b6cc-22e9a0122b3c" absoluteBounds="9, 1.125, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/VrijstellingenDataContext/Upload" />
       <nestedChildShapes>
-        <elementListCompartment Id="f069b3df-9485-437e-b0a7-c40a67853810" absoluteBounds="0.765, 12.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="56b33d52-48c7-497c-b6ab-35ceaf8dd31f" absoluteBounds="9.015, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="db6b23c4-a34b-4440-9abc-affc3f7a0240" absoluteBounds="0.75, 9.25, 2, 1.9631982421874987">
-      <DataClassMoniker Name="/VrijstellingenDataContext/tblStudent" />
+    <classShape Id="085c7255-ac65-46e0-9eb9-933bf52e53d1" absoluteBounds="3.5, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/VrijstellingenDataContext/Vakken" />
       <nestedChildShapes>
-        <elementListCompartment Id="fc751c6f-237f-4ac0-a9dd-2081405263f3" absoluteBounds="0.765, 9.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="05ea27f3-d98c-4168-9ffb-88d4f60170e7" absoluteBounds="3.515, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="95ffb972-018f-47ac-86e9-c8ac392c065e" absoluteBounds="0.75, 4.375, 2, 1.5785953776041666">
-      <DataClassMoniker Name="/VrijstellingenDataContext/tblVakken" />
-      <nestedChildShapes>
-        <elementListCompartment Id="628a3b0e-153a-4138-97b8-0a756e40d653" absoluteBounds="0.765, 4.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="811b4aef-a9d0-4c73-a241-afe0a599721e" absoluteBounds="0.75, 14.75, 2, 2.1554996744791666">
-      <DataClassMoniker Name="/VrijstellingenDataContext/tblVrijstelling" />
-      <nestedChildShapes>
-        <elementListCompartment Id="d9195976-222f-4d1d-bebb-d3dc2029c26e" absoluteBounds="0.765, 15.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <associationConnector edgePoints="[(2.75 : 7.51044840494792); (3.88541416666667 : 7.51044840494792 : JumpStart); (4.05208083333333 : 7.51044840494792 : JumpEnd); (4.15104041666667 : 7.51044840494792 : JumpStart); (4.31770708333333 : 7.51044840494792 : JumpEnd); (4.5 : 7.51044840494792); (4.5 : 3.03049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/VrijstellingenDataContext/tblAdmin/tblAdmin_tblKoppel" />
+    <associationConnector edgePoints="[(8.25 : 1.91429768880208); (9 : 1.91429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VrijstellingenDataContext/Vrijstelling/tblVrijstelling_tblUpload" />
       <nodes>
-        <classShapeMoniker Id="5c6c72a6-d188-4b4e-afdc-f3656144ac41" />
-        <classShapeMoniker Id="01d290b5-4084-49ae-b873-cd9fdb3b3536" />
+        <classShapeMoniker Id="8c852ab1-f555-46b7-b3e3-a4f5d0daf0e3" />
+        <classShapeMoniker Id="3fdf8c9a-c911-4190-b6cc-22e9a0122b3c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 2.06814697265625); (3.5 : 2.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/VrijstellingenDataContext/tblLeerkracht/tblLeerkracht_tblKoppel" />
+    <associationConnector edgePoints="[(5.5 : 1.94314697265625); (6.25 : 1.94314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VrijstellingenDataContext/Vakken/tblVakken_tblVrijstelling" />
       <nodes>
-        <classShapeMoniker Id="0a0b8571-e209-4434-9e5c-01319e7887c2" />
-        <classShapeMoniker Id="01d290b5-4084-49ae-b873-cd9fdb3b3536" />
+        <classShapeMoniker Id="085c7255-ac65-46e0-9eb9-933bf52e53d1" />
+        <classShapeMoniker Id="8c852ab1-f555-46b7-b3e3-a4f5d0daf0e3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 12.9527498372396); (3.9687475 : 12.9527498372396); (3.9687475 : 3.03049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/VrijstellingenDataContext/tblRapport/tblRapport_tblKoppel" />
+    <associationConnector edgePoints="[(1.75 : 2.75); (1.75 : 1.94314697265625); (3.5 : 1.94314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/VrijstellingenDataContext/Opleiding/tblOpleiding_tblVakken" />
       <nodes>
-        <classShapeMoniker Id="d7ee6ef6-afb9-4314-abdb-48d1dd21c1c5" />
-        <classShapeMoniker Id="01d290b5-4084-49ae-b873-cd9fdb3b3536" />
+        <classShapeMoniker Id="e189ede7-e043-40c1-a510-2565dc987926" />
+        <classShapeMoniker Id="085c7255-ac65-46e0-9eb9-933bf52e53d1" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 10.2315991210937); (3.88541416666667 : 10.2315991210937 : JumpStart); (4.05208083333333 : 10.2315991210937 : JumpEnd); (4.15104041666667 : 10.2315991210937 : JumpStart); (4.31770708333333 : 10.2315991210937 : JumpEnd); (5.0312525 : 10.2315991210937); (5.0312525 : 3.03049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/VrijstellingenDataContext/tblStudent/tblStudent_tblKoppel" />
+    <associationConnector edgePoints="[(2.75 : 3.78449625651042); (3.5 : 3.78449625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/VrijstellingenDataContext/Opleiding/tblOpleiding_Student" />
       <nodes>
-        <classShapeMoniker Id="db6b23c4-a34b-4440-9abc-affc3f7a0240" />
-        <classShapeMoniker Id="01d290b5-4084-49ae-b873-cd9fdb3b3536" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 5.16429768880208); (3.70312125 : 5.16429768880208); (3.70312125 : 3.03049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/VrijstellingenDataContext/tblVakken/tblVakken_tblKoppel" />
-      <nodes>
-        <classShapeMoniker Id="95ffb972-018f-47ac-86e9-c8ac392c065e" />
-        <classShapeMoniker Id="01d290b5-4084-49ae-b873-cd9fdb3b3536" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 15.8277498372396); (4.23437375 : 15.8277498372396); (4.23437375 : 3.03049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/VrijstellingenDataContext/tblVrijstelling/tblVrijstelling_tblKoppel" />
-      <nodes>
-        <classShapeMoniker Id="811b4aef-a9d0-4c73-a241-afe0a599721e" />
-        <classShapeMoniker Id="01d290b5-4084-49ae-b873-cd9fdb3b3536" />
+        <classShapeMoniker Id="e189ede7-e043-40c1-a510-2565dc987926" />
+        <classShapeMoniker Id="fd98951f-c168-4939-b2bf-9ef4a015df24" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

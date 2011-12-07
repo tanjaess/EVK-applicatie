@@ -1,82 +1,51 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBvrijstellingen" Class="VrijstellingenDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\DBvrijstellingen.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DBvrijstellingenConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.tblAdmin" Member="tblAdmins">
-    <Type Name="tblAdmin">
-      <Column Name="pk_adminID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="adminStatus" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="adminBijlage" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="adminGoedgekeurd" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="fk_caseID" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
-      <Association Name="tblAdmin_tblKoppel" Member="tblKoppels" ThisKey="pk_adminID" OtherKey="fk_adminID" Type="tblKoppel" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database1" Class="VrijstellingenDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblOpleiding" Member="Opleidings">
+    <Type Name="Opleiding">
+      <Column Name="pk_opleidingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="opleidingNaam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="tblOpleiding_Student" Member="Students" ThisKey="pk_opleidingID" OtherKey="fk_opleiding" Type="Student" />
+      <Association Name="tblOpleiding_tblVakken" Member="Vakkens" Storage="_tblVakkens" ThisKey="pk_opleidingID" OtherKey="fk_opleidingID" Type="Vakken" />
     </Type>
   </Table>
-  <Table Name="dbo.tblKoppel" Member="tblKoppels">
-    <Type Name="tblKoppel">
-      <Column Name="pk_caseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="fk_leerlingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="fk_vrijstellingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="fk_leerkrachtID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="fk_adminID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="fk_vakkenID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="fk_rapportID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="tblAdmin_tblKoppel" Member="tblAdmin" ThisKey="fk_adminID" OtherKey="pk_adminID" Type="tblAdmin" IsForeignKey="true" />
-      <Association Name="tblLeerkracht_tblKoppel" Member="tblLeerkracht" ThisKey="fk_leerkrachtID" OtherKey="pk_leerkrachtID" Type="tblLeerkracht" IsForeignKey="true" />
-      <Association Name="tblRapport_tblKoppel" Member="tblRapport" ThisKey="fk_rapportID" OtherKey="pk_rapportID" Type="tblRapport" IsForeignKey="true" />
-      <Association Name="tblStudent_tblKoppel" Member="tblStudent" ThisKey="fk_leerlingID" OtherKey="pk_leerlingID" Type="tblStudent" IsForeignKey="true" />
-      <Association Name="tblVakken_tblKoppel" Member="tblVakken" ThisKey="fk_vakkenID" OtherKey="pk_vakkenID" Type="tblVakken" IsForeignKey="true" />
-      <Association Name="tblVrijstelling_tblKoppel" Member="tblVrijstelling" ThisKey="fk_vrijstellingID" OtherKey="pk_vrijstellingID" Type="tblVrijstelling" IsForeignKey="true" />
+  <Table Name="dbo.tblVrijstelling" Member="Vrijstellings">
+    <Type Name="Vrijstelling">
+      <Column Name="pk_VrijstellingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fk_vak" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vak_extern" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="school" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="studiepunten" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="tblVrijstelling_tblUpload" Member="Uploads" Storage="_tblUploads" ThisKey="pk_VrijstellingID" OtherKey="fk_vrijstellingID" Type="Upload" />
+      <Association Name="tblVakken_tblVrijstelling" Member="Vakken" Storage="_tblVakken" ThisKey="fk_vak" OtherKey="pk_vak" Type="Vakken" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tblLeerkracht" Member="tblLeerkrachts">
-    <Type Name="tblLeerkracht">
-      <Column Name="pk_leerkrachtID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="leerkrachtNaam" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="leerkrachtPW" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Association Name="tblLeerkracht_tblKoppel" Member="tblKoppels" ThisKey="pk_leerkrachtID" OtherKey="fk_leerkrachtID" Type="tblKoppel" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tblRapport" Member="tblRapports">
-    <Type Name="tblRapport">
-      <Column Name="pk_rapportID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="rapportNaam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="rapportJaar" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="rapportOpleiding" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="rapportSchooladres" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="rapportURL" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="rapportStatus" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Association Name="tblRapport_tblKoppel" Member="tblKoppels" ThisKey="pk_rapportID" OtherKey="fk_rapportID" Type="tblKoppel" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tblStudent" Member="tblStudents">
-    <Type Name="tblStudent">
-      <Column Name="pk_leerlingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="studentVoornaam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+  <Table Name="dbo.tblStudent" Member="Students">
+    <Type Name="Student">
+      <Column Name="pk_student" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fk_opleiding" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="studentNr" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="studentNaam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="studentPasswd" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="StudentNr" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="StudentOpleiding" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Association Name="tblStudent_tblKoppel" Member="tblKoppels" ThisKey="pk_leerlingID" OtherKey="fk_leerlingID" Type="tblKoppel" />
+      <Column Name="studentVoornaam" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="studentWachtwoord" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="tblOpleiding_Student" Member="Opleiding" Storage="_tblOpleiding" ThisKey="fk_opleiding" OtherKey="pk_opleidingID" Type="Opleiding" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tblVakken" Member="tblVakkens">
-    <Type Name="tblVakken">
-      <Column Name="pk_vakkenID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="vakNaam" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="vakStudiepunten" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="vakOpleiding" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Association Name="tblVakken_tblKoppel" Member="tblKoppels" ThisKey="pk_vakkenID" OtherKey="fk_vakkenID" Type="tblKoppel" />
+  <Table Name="dbo.tblUpload" Member="Uploads">
+    <Type Name="Upload">
+      <Column Name="UploadID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fk_vrijstellingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="titel" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="tblVrijstelling_tblUpload" Member="Vrijstelling" Storage="_tblVrijstelling" ThisKey="fk_vrijstellingID" OtherKey="pk_VrijstellingID" Type="Vrijstelling" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tblVrijstelling" Member="tblVrijstellings">
-    <Type Name="tblVrijstelling">
-      <Column Name="pk_vrijstellingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="vrijstellingStudiemateriaal" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="vrijstellingSchooljaar" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="vrijstellingOpleidinggev" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="vrijstellingSchoolgeg" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="vrijstellingVak" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="vrijstellingVakSP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="tblVrijstelling_tblKoppel" Member="tblKoppels" ThisKey="pk_vrijstellingID" OtherKey="fk_vrijstellingID" Type="tblKoppel" />
+  <Table Name="dbo.tblVakken" Member="Vakkens">
+    <Type Name="Vakken">
+      <Column Name="pk_vak" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="opleiding" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="fk_opleidingID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tblVakken_tblVrijstelling" Member="Vrijstellings" Storage="_tblVrijstellings" ThisKey="pk_vak" OtherKey="fk_vak" Type="Vrijstelling" />
+      <Association Name="tblOpleiding_tblVakken" Member="Opleiding1" Storage="_tblOpleiding" ThisKey="fk_opleidingID" OtherKey="pk_opleidingID" Type="Opleiding" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
