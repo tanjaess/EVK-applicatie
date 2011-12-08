@@ -49,3 +49,15 @@ a {
 .wrapper p {
     margin: 20px;
 }
+
+/* =====stap2: selectie opleidingsonderdeel ==== */
+
+.backgroundPanelPop
+{
+    background-color: White;
+    border: 1px solid Aqua;
+    }
+.pageOverlayPanel
+{
+    
+    }

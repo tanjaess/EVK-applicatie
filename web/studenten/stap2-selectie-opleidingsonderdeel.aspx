@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/layout/master.master" AutoEventWireup="true" CodeFile="stap2-selectie-opleidingsonderdeel.aspx.cs" Inherits="web_studenten_stap2_selectie_opleidingsonderdeel" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="../../layout/master.master" AutoEventWireup="true" CodeFile="stap2-selectie-opleidingsonderdeel.aspx.cs" Inherits="web_studenten_stap2_selectie_opleidingsonderdeel" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
@@ -8,7 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="top" Runat="Server">
     <asp:HyperLink ID="logout" runat="server">Logout ...naam...</asp:HyperLink>
     <br />
-    <br : />
+    <br />
     <asp:HyperLink ID="mail" runat="server" NavigateUrl="mailto:else.vanorle@lessius.eu">Lukt het niet? Contacteer mevr. Van Orlé.</asp:HyperLink>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="customNavigation" Runat="Server">
@@ -28,19 +28,19 @@
             <img src="../../img/ajax-loader.gif" alt="loading" />
         </ProgressTemplate>
     </asp:UpdateProgress>
-    <ajaxtoolkit:modalpopupextender ID="MPE" runat="server"
-    TargetControlID="btnSelectOpleidingsonderdelen"
-    PopupControlID="panSelecteerOpleidingsonderdelen"
-    BackgroundCssClass="modalBackground" 
-    DropShadow="true" 
-    OkControlID="OkButton" 
-    OnOkScript="onOk()"
-    CancelControlID="CancelButton" 
-    PopupDragHandleControlID="Panel3" >
-    </ajaxtoolkit:modalpopupextender>
-    <asp:Button ID="btnSelectOpleidingsonderdelen" runat="server" Text="Selecteer opleidingsonderdelen"></asp:Button>
-    <asp:Panel ID="panSelecteerOpleidingsonderdelen" runat="server">
+    <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server"
+        TargetControlID="btnSelectOpleidingsonderdelen"
+        PopupControlID="panSelecteerOpleidingsonderdelen"
+        DropShadow="true" 
+        OkControlID="btnOk"
+        CancelControlID="btnCancel">
+    </asp:ModalPopupExtender>
 
+    <asp:Button ID="btnSelectOpleidingsonderdelen" runat="server" Text="Selecteer opleidingsonderdelen"></asp:Button>
+    
+    <asp:Panel ID="panSelecteerOpleidingsonderdelen" runat="server">
+    <asp:Button ID="btnCancel" runat="server" Text="Annuleer"></asp:Button>
+    <asp:Button ID="btnOk" runat="server" Text="Ok"></asp:Button>
     </asp:Panel>
 </asp:Content>
 
