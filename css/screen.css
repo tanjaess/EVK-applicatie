@@ -1,4 +1,7 @@
-﻿body {
+﻿body 
+{
+    font-family: Verdana, Times New Roman;
+    font-size: 11px;
 }
 
 .header {
@@ -7,12 +10,13 @@
 }
 
 #logo {
-    height: 70px;
-    width: 168px;
+    height: 75px;
+    width: 150px;
     background: #4D2C49;
     float: right;
     margin-right: 20px;
     margin-bottom: -15px;
+    background-image: url('../images/LogoLessiusMechelen.jpg');
 }
 
 
@@ -43,9 +47,44 @@ a {
     color: #4D2C49;
 }
 
-.wrapper {
+.wrapper 
+{
+    margin: 20px;
 }
 
-.wrapper p {
-    margin: 20px;
+.wrapper ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.wrapper p
+{
+    margin-top: 10px;
+}
+
+.title
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.subtitle
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.subsubtitle
+{
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.buttons
+{
+    float: right;
+    width: 200px;
+    padding-right: 20px;
 }

@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/layout/master.master" AutoEventWireup="true" CodeFile="register.aspx.cs" Inherits="web_register" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/screen.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .style1
         {
@@ -12,14 +14,10 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="top" Runat="Server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="customNavigation" Runat="Server">
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="header" Runat="Server">
-    <h1>Jou gegevens</h1>
-</asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="body" Runat="Server">
+<div class="clear"></div>
+<div class="wrapper">
+    <p class="title">Jou gegevens</p>
     <table class="style1">
         <tr>
             <td class="style2">
@@ -84,9 +82,11 @@
             </td>
         </tr>
     </table>
-</asp:Content>
-<asp:Content ID="Content6" ContentPlaceHolderID="footer" Runat="Server">
-    <asp:Button ID="btnVolgende" runat="server" onclick="btnVolgende_Click" 
+</div>
+<div class="buttons">
+<asp:Button ID="btnVolgende" runat="server" onclick="btnVolgende_Click" 
         Text="Volgende" />
+</div>
+<div class="clear"></div>
 </asp:Content>
 

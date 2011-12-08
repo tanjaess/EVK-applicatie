@@ -25,9 +25,11 @@ public partial class web_register : System.Web.UI.Page
         s.studentNaam = txtAchternaam.Text;
         s.studentNr = txtStudentnr.Text;
         s.fk_opleiding = Convert.ToInt16(dropOpleiding.SelectedValue);
-        s.studentWachtwoord = txtWachtwoord.Text;
-        //Student bewaren en doorsturen naar volgende pagina
         BLLstudent BLLstudent = new BLLstudent();
+        //Wachtwoord omzetten naar md5
+        var passw = BLLstudent.getMd5Hash(txtWachtwoord.Text);
+        s.studentWachtwoord = passw;
+        //Student bewaren en doorsturen naar volgende pagina        
         BLLstudent.insertStudent(s);
         Response.Redirect("procedureGoedkeuring.aspx");
     }
