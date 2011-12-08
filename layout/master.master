@@ -20,7 +20,8 @@
                 <div class="clear"></div>
                 <div id="logo"></div>
                 <div class="clear"></div>
-                <p class="contact">Lukt er iets niet? <a href="#">Contacteer Els Van Orlé</a></p>
+                <p class="contact">Lukt er iets niet? 
+                <asp:HyperLink ID="mail" runat="server" NavigateUrl="mailto:else.vanorle@lessius.eu">Contacteer mevr. Van Orlé.</asp:HyperLink></p>
                 <hr class="line" />
             </div>
         </asp:ContentPlaceHolder>

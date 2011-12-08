@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
     <link href="../../css/screen.css" rel="stylesheet" type="text/css" />
+    <title>Stap 1: gegevens invullen</title>
     <style type="text/css">
         .style1
         {

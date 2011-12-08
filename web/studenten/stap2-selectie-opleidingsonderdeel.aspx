@@ -3,21 +3,14 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/screen.css" rel="stylesheet" type="text/css" />
     <title>Stap 2: Selectie opleidingsonderdeel</title>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="top" Runat="Server">
-    <asp:HyperLink ID="logout" runat="server">Logout ...naam...</asp:HyperLink>
-    <br />
-    <br : />
-    <asp:HyperLink ID="mail" runat="server" NavigateUrl="mailto:else.vanorle@lessius.eu">Lukt het niet? Contacteer mevr. Van Orlé.</asp:HyperLink>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="customNavigation" Runat="Server">
-    <br /><p>custom component ... </p>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="header" Runat="Server">
-    <h1>Selectie opleidingsonderdeel</h1>
-</asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="body" Runat="Server">
+<div class="clear"></div>
+<div class="wrapper">
+<p class="title">Selectie opleidingsonderdeel</p>
     <br />
     <asp:Label runat="server">Selecteer eerst de vakkan waarvoor u een vrijstelling wil aanvragen.</asp:Label>
     <br />
@@ -25,10 +18,10 @@
     </asp:ScriptManager>
     <asp:UpdateProgress ID="UpdateProgress1" runat="server">
         <ProgressTemplate>
-            <img src="../../img/ajax-loader.gif" alt="loading" />
+            <img src="../../images/ajax-loader.gif" alt="loading" />
         </ProgressTemplate>
     </asp:UpdateProgress>
-    <ajaxtoolkit:modalpopupextender ID="MPE" runat="server"
+    <asp:ModalPopupExtender ID="MPE" runat="server"
     TargetControlID="btnSelectOpleidingsonderdelen"
     PopupControlID="panSelecteerOpleidingsonderdelen"
     BackgroundCssClass="modalBackground" 
@@ -37,15 +30,9 @@
     OnOkScript="onOk()"
     CancelControlID="CancelButton" 
     PopupDragHandleControlID="Panel3" >
-    </ajaxtoolkit:modalpopupextender>
+    </asp:ModalPopupExtender>
     <asp:Button ID="btnSelectOpleidingsonderdelen" runat="server" Text="Selecteer opleidingsonderdelen"></asp:Button>
     <asp:Panel ID="panSelecteerOpleidingsonderdelen" runat="server">
-
     </asp:Panel>
+</div>
 </asp:Content>
-
-<asp:Content ID="Content6" ContentPlaceHolderID="footer" Runat="Server">
-    <br />
-    <asp:Label ID="foottext" runat="server">EVK-registratieLessius Mechelen</asp:Label>
-</asp:Content>
-
