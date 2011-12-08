@@ -44,6 +44,7 @@
     </asp:Panel>
 </asp:Content>
 
+
 <asp:Content ID="Content6" ContentPlaceHolderID="footer" Runat="Server">
     <br />
     <asp:Label ID="foottext" runat="server">EVK-registratieLessius Mechelen</asp:Label>

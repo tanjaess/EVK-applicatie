@@ -7,20 +7,38 @@ using System.Web.UI.WebControls;
 
 public partial class web_studenten_stap2_selectieopleidingsonderdeel : System.Web.UI.Page
 {
+    private List<int> vakkenIDs = new List<int>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        string strchklist = "";
+        foreach (ListItem li in checkVakken.Items)
+        {
+            if (li.Selected)
+            {
+                strchklist += li.Text + " ";
+                vakkenIDs.Add(Convert.ToInt16(li.Value));
+            }
+        }
+        lblFeedback.Text = strchklist;
+
+        foreach (int i in vakkenIDs)
+            lblvakkenID.Text = i + " ";
+        // vakken uitlussen
+       
     }
     protected void btnOk_Click(object sender, EventArgs e)
     {
-        // alle vakken met tabel moeten worden aangemaakt
+        // DOEL: alle vakken met tabel moeten worden aangemaakt
+        
 
 
+        // vakken uitlussen
+        
 
-        // alle vakken die aangecheckt zijn ophalen
 
 
         // alle titels + tabellen genereren
+
 
     }
 }

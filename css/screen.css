@@ -59,5 +59,8 @@ a {
     }
 .pageOverlayPanel
 {
+      background-color: Black;
+      filter: alpha(opacity=30);
+      opacity: 0.3;
     
     }

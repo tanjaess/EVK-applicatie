@@ -22,6 +22,9 @@ Inherits="web_studenten_stap2_selectieopleidingsonderdeel" %>
             <img src="../../img/ajax-loader.gif" alt="loading" />
         </ProgressTemplate>
     </asp:UpdateProgress>
+    
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
     <asp:ModalPopupExtender ID="ModalPopupExtender1" runat="server"
         TargetControlID="btnSelectOpleidingsonderdelen"
         PopupControlID="panSelecteerOpleidingsonderdelen"
@@ -36,20 +39,27 @@ Inherits="web_studenten_stap2_selectieopleidingsonderdeel" %>
     <asp:Panel ID="panSelecteerOpleidingsonderdelen" runat="server" CssClass="backgroundPanelPop">
     <h3>Selecteer je opleidingsonderdelen</h3>
     <em>Vink <strong>alle</strong> vakken aan waarvoor je een vrijstelling wil aanvragen.</em>
-    <asp:CheckBoxList ID="CheckBoxList1" runat="server" AutoPostBack="True">
-    <asp:ListItem>Visualieren</asp:ListItem>
-    <asp:ListItem>Photoshop</asp:ListItem>
-    <asp:ListItem>Web auto</asp:ListItem>
-    </asp:CheckBoxList>
-    <asp:Button ID="btnCancel" runat="server" Text="Annuleer"></asp:Button>
-    <asp:Button ID="btnOk" runat="server" Text="Ok" onclick="btnOk_Click"></asp:Button>
+        <asp:CheckBoxList ID="checkVakken" runat="server" AutoPostBack="True">
+            <asp:ListItem Value="1">Visualieren</asp:ListItem>
+            <asp:ListItem Value="2">Photoshop</asp:ListItem>
+            <asp:ListItem Value="3">Web auto</asp:ListItem>
+        </asp:CheckBoxList>
+    <asp:Button ID="btnCancel" runat="server" Text="Annuleer" AutoPostBack="True"></asp:Button>
+    <asp:Button ID="btnOk" runat="server" Text="Ok" onclick="btnOk_Click" AutoPostBack="True"></asp:Button>
     </asp:Panel>
 
-    <h3>Selecteer Vrijstellingen:</h3>
+    
+    <h3>Vul je vrijstellingen aan</h3>
+
+    <asp:Label runat="server" ID="lblFeedback"></asp:Label><br />
+
+    <asp:Label runat="server" ID="lblvakkenID"></asp:Label><br />
 
     <asp:Button ID="Vorige" runat="server" Text="< Vorige"/>
     <asp:Button ID="Volgende" runat="server" Text="Volgende >"/>
+        
+    </ContentTemplate>
+    </asp:UpdatePanel>
 </form>
 
 </asp:Content>
-
