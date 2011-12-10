@@ -8,11 +8,76 @@
     <h1>Admin</h1>
 </asp:Content>
 <asp:Content ID="header" ContentPlaceHolderID="header" Runat="Server">
-    <h1>Overzicht</h1>
+    <h2>Overzicht</h2>
 </asp:Content>
 <asp:Content ID="body" ContentPlaceHolderID="body" Runat="Server">
+    <asp:Repeater ID="rptRapporten" runat="server">
+    <HeaderTemplate>
+    <h3>Overzicht rapporten</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>Student</td>
+                <td>Jaar</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+    </HeaderTemplate>
+    <ItemTemplate>
+            <tr>
+                <td>Naam, Voornaam</td>
+                <td>2010-2011</td>
+                <td>ok/niet ok</td>
+            </tr>
+    </ItemTemplate>
+    <FooterTemplate></table></FooterTemplate>
+    </asp:Repeater>
 
+     <asp:Repeater ID="rptDossiersInBehandeling" runat="server">
+    <HeaderTemplate>
+    <h3>Dossiers in Behandeling</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>Student</td>
+                <td>Vak</td>
+                <td>Docent</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+    </HeaderTemplate>
+    <ItemTemplate>
+            <tr>
+                <td>Naam, Voornaam</td>
+                <td>Photoshop</td>
+                <td>Mr. VanElderen</td>
+                <td>Goedgekeurd</td>
+            </tr>
+    </ItemTemplate>
+    <FooterTemplate></table></FooterTemplate>
+    </asp:Repeater>
+
+     <asp:Repeater ID="rptAfgerondeDossiers" runat="server">
+    <HeaderTemplate>
+    <h3>Overzicht afgeronde dossiers</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>Student</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+    </HeaderTemplate>
+    <ItemTemplate>
+            <tr>
+                <td>Naam, Voornaam</td>
+                <td>ok/niet ok</td>
+            </tr>
+    </ItemTemplate>
+    <FooterTemplate></table></FooterTemplate>
+    </asp:Repeater>
 </asp:Content>
+
 <asp:Content ID="footer" ContentPlaceHolderID="footer" Runat="Server">
 </asp:Content>
 
